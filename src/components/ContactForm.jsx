@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Formik } from 'formik';
 import { MainForm, Button, Label, Input } from './GlobalStyle';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../redux/contactSlice';
-import { getContacts } from '../redux/contactSlice';
+import { addContact } from '../redux/operations';
+import { getContacts } from '../redux/selectors';
 import { nanoid } from 'nanoid';
 
 export const ContactForm = () => {

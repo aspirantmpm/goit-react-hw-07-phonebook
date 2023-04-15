@@ -1,6 +1,7 @@
 import { Find, FindInput, Label } from './GlobalStyle';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterContact, getFilter } from '../redux/contactSlice';
+import { getFilter } from '../redux/selectors';
+import { setFilter } from '../redux/filterSlice';
 
 export const ContactFind = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ export const ContactFind = () => {
   const onFilter = useSelector(getFilter);
 
   const onChange = e => {
-    dispatch(filterContact(e.currentTarget.value));
+    dispatch(setFilter(e.currentTarget.value));
   };
   return (
     <Find>
